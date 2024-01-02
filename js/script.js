@@ -38,6 +38,12 @@ document.forms['birth-date'].addEventListener('submit', e => {
     if(!checkIfDateIsInThePast())
       formIsValid = false;
 
+  if(formIsValid) {
+    removeFormErrorGap();
+  } else {
+    addFormErrorGap();
+  }
+
   if(formIsValid)
     submitForm();
 
@@ -219,11 +225,6 @@ function displayErrorMessageAndStyle(input, label, span, errorMessage) {
   if(!label.classList.contains('error-text-color'))
     label.classList.add('error-text-color');
 
-  if(!document.forms['birth-date'].classList.contains('form-gap-error')) {
-      document.forms['birth-date'].classList.remove('form-gap');
-      document.forms['birth-date'].classList.add('form-gap-error');
-    }
-
   span.innerHTML = errorMessage;
 
   if(span.classList.contains('display-none'))
@@ -240,11 +241,6 @@ function removeErrorMessageAndStyle(input, label, span, errorMessage) {
   if(label.classList.contains('error-text-color'))
     label.classList.remove('error-text-color');
 
-  if(document.forms['birth-date'].classList.contains('form-gap-error')) {
-      document.forms['birth-date'].classList.remove('form-gap-error');
-      document.forms['birth-date'].classList.add('form-gap');
-    }
-
   if(!span.classList.contains('display-none'))
     span.classList.add('display-none');
 
@@ -252,7 +248,19 @@ function removeErrorMessageAndStyle(input, label, span, errorMessage) {
 
 }
 
+function addFormErrorGap() {
+  if(!document.forms['birth-date'].classList.contains('form-gap-error')) {
+    document.forms['birth-date'].classList.remove('form-gap');
+    document.forms['birth-date'].classList.add('form-gap-error');
+  }
+}
 
+function removeFormErrorGap() {
+  if(document.forms['birth-date'].classList.contains('form-gap-error')) {
+    document.forms['birth-date'].classList.remove('form-gap-error');
+    document.forms['birth-date'].classList.add('form-gap');
+  }
+}
 
 function submitForm() {
 
