@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+</head>
+<body>
+
+<main>
+
+  <form name="birth-date" class="form-gap">
+    <div>
+      <div>
+        <label for="day">DAY</label>
+        <input class="num-input" type="number" name="day" id="day" placeholder="DD">
+        <span class="error-message display-none"></span>
+      </div>
+      <div>
+        <label for="month">MONTH</label>
+        <input class="num-input" type="number" name="month" id="month" placeholder="MM">
+        <span class="error-message display-none"></span>
+      </div>
+      <div>
+        <label for="year">YEAR</label>
+        <input class="num-input" type="number" name="year" id="year" placeholder="YYYY">
+        <span class="error-message display-none"></span>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div></div>
+      </div>
+      <button type="submit">
+        <img src="assets/images/icon-arrow.svg" alt="icon arrow">
+      </button>
+      <div>
+        <div></div>
+      </div>
+    </div>
+  </form>
+  <div>
+    <em><span class="years">--</span> years</em>
+    <em><span class="months">--</span> months</em>
+    <em><span class="days">--</span> days</em>
+  </div>
+
+</main>
+  
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/ckOa97" target="_blank">Aleksandar Stankovic</a>.
+  </div>-->
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
