@@ -1,574 +1,574 @@
 * {
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+
+  background-color: hsl(0, 0%, 86%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: hsl(0, 0%, 8%);
+  padding: 2vh 0;
+
+}
+
+main {
+
+  width: 95%;
+  max-width: 840px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px 30px 200px 30px;
+  padding: 3.8rem 3.5rem;
+  background-color: hsl(0, 0%, 100%);
+
+}
+
+form {
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+form div:first-of-type {
+
+  display: flex;
+  gap: 2rem;
+
+}
+
+form div:first-of-type div {
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: hsla(0, 1%, 44%, 0.85);
+  position: relative;
+
+}
+
+form label {
+
+  font-size: .8rem;
+  font-weight: bold;
+  letter-spacing: .15rem;
+
+}
+
+.error-text-color {
+
+  color: hsl(0, 100%, 67%);
+
+}
+
+form input {
+
+  max-width: 125px;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  outline: none;
+
+}
+
+form input:disabled,
+form input:disabled:hover,
+form input:disabled:focus {
+
+  border: 1px solid hsl(0, 0%, 86%, .9);
+  color: hsla(0, 0%, 86%, .5);
+  background-color: hsl(0, 0%, 100%);
+
+}
+
+form input:disabled:-webkit-autofill,
+form input:disabled:-webkit-autofill:focus {
+  box-shadow: 0 0 0 50px hsl(0, 0%, 100%) inset;
+  -webkit-text-fill-color: hsla(0, 0%, 86%, .5);
+
+}
+
+.num-input {
+
+  border: 1px solid hsl(0, 0%, 86%);
+
+}
+
+.num-input-error {
+
+  border: 1px solid hsl(0, 100%, 67%);
+
+}
+
+.num-input:hover {
+
+  border-color: hsl(259, 100%, 65%);
+
+}
+
+.num-input-error:hover {
+
+  border-color: hsl(0, 100%, 67%);
+  /* outline: 1px solid hsl(0, 100%, 67%);
+    outline-offset: -2px; */
+
+}
+
+.num-input:focus {
+
+  border-color: hsl(259, 100%, 65%);
+
+}
+
+.num-input-error:focus {
+
+  border-color: hsl(0, 100%, 67%);
+  /* outline: 1px solid hsl(0, 100%, 67%);
+    outline-offset: -2px; */
+
+}
+
+form input::placeholder {
+
+  color: hsla(0, 1%, 44%, 0.85);
+
+}
+
+form input:-webkit-autofill {
+  box-shadow: 0 0 0 50px hsl(0, 0%, 100%) inset;
+}
+
+form input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 50px hsl(0, 0%, 100%) inset;
+}
+
+.error-message {
+
+  color: hsl(0, 100%, 67%);
+  font-size: .65rem;
+  font-style: italic;
+  position: absolute;
+  bottom: -1.25rem;
+  left: 0;
+
+}
+
+.display-none {
+
+  display: none;
+
+}
+
+form > div:last-of-type {
+
+  display: flex;
+
+}
+
+form > div:last-of-type > div {
+
+  width: 100%;
+
+}
+
+form > div:last-of-type > div:last-of-type {
+
+  display: none;
+
+}
+
+form > div:last-of-type > div div {
+
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+
+}
+
+form button {
+
+  min-width: 96px;
+  min-height: 96px;
+  border-radius: 100%;
+  border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(259, 100%, 65%);
+  cursor: pointer;
+
+}
+
+form button:disabled {
+
+  opacity: .5;
+
+}
+
+form button:disabled:hover {
+
+  background-color: hsl(259, 100%, 65%);
+
+}
+
+form button:disabled:focus {
+
+  background-color: hsl(259, 100%, 65%);
+
+}
+
+form button:hover {
+
+  background-color: hsl(0, 0%, 8%);
+
+}
+
+form button:focus {
+
+  outline: 1px solid black;
+  outline-offset: -1px;
+
+}
+
+form button img {
+
+  display: block;
+  width: 50%;
+  max-width: 100%;
+  margin: 25%;
+
+}
+
+main > div {
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+main > div em {
+
+  font-weight: 800;
+  font-size: 6.5rem;
+  /*line-height: 7rem;*/
+  line-height: 1.075em;
+
+}
+
+main > div span {
+
+  color: hsl(259, 100%, 65%);
+
+}
+
+@media screen and (max-width: 1200px) {
+
+  :root {
+
+    font-size: 15px;
 
   }
 
-  body {
+}
 
-    background-color: hsl(0, 0%, 86%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    color: hsl(0, 0%, 8%);
-    padding: 2vh 0;
+@media screen and (max-width: 668px) {
+
+  main > div em {
+
+    font-size: 5.5rem;
 
   }
 
-  main {
+}
 
-    width: 95%;
-    max-width: 840px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 30px 30px 200px 30px;
-    padding: 3.8rem 3.5rem;
-    background-color: hsl(0, 0%, 100%);
+@media screen and (max-width: 640px) {
+
+  :root {
+
+    font-size: 14px;
 
   }
 
-  form {
+  .form-gap {
 
-    display: flex;
-    flex-direction: column;
-    
+    gap: 1rem;
+
   }
-  
-  form div:first-of-type {
-    
-    display: flex;
+
+  .form-gap-error {
+
     gap: 2rem;
 
   }
 
-  form div:first-of-type div {
-    
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    color: hsla(0, 1%, 44%, 0.85);
-    position: relative;
-    
-  }
+  form div:first-of-type {
 
-  form label {
-
-    font-size: .8rem;
-    font-weight: bold;
-    letter-spacing: .15rem;
-
-  }
-
-  .error-text-color {
-
-    color: hsl(0, 100%, 67%);
-
-  }
-  
-  form input {
-
-    max-width: 125px;
-    padding: 1rem;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    outline: none;
-
-  }
-
-  form input:disabled, 
-  form input:disabled:hover,
-  form input:disabled:focus {
-
-    border: 1px solid hsl(0, 0%, 86%, .9);
-    color: hsla(0, 0%, 86%, .5);
-    background-color: hsl(0, 0%, 100%);
-
-  }
-
-  form input:disabled:-webkit-autofill, 
-  form input:disabled:-webkit-autofill:focus {
-    box-shadow:0 0 0 50px hsl(0, 0%, 100%) inset;
-    -webkit-text-fill-color: hsla(0, 0%, 86%, .5);
-
-  }
-
-  .num-input {
-
-    border: 1px solid hsl(0, 0%, 86%);
-
-  }
-
-  .num-input-error {
-
-    border: 1px solid hsl(0, 100%, 67%);
-
-  }
-
-  .num-input:hover {
-
-    border-color: hsl(259, 100%, 65%);
-
-  }
-
-  .num-input-error:hover {
-
-    border-color: hsl(0, 100%, 67%);
-   /* outline: 1px solid hsl(0, 100%, 67%);
-    outline-offset: -2px; */
-
-  }
-
-  .num-input:focus {
-
-    border-color: hsl(259, 100%, 65%);
-
-  }
-
-  .num-input-error:focus {
-
-    border-color: hsl(0, 100%, 67%);
-   /* outline: 1px solid hsl(0, 100%, 67%);
-    outline-offset: -2px; */
-
-  }
-
-  form input::placeholder {
-
-    color: hsla(0, 1%, 44%, 0.85);
-
-  }
-
-  form input:-webkit-autofill {
-    box-shadow:0 0 0 50px hsl(0, 0%, 100%) inset;
-  }
-
-  form input:-webkit-autofill:focus {
-    box-shadow: 0 0 0 50px hsl(0, 0%, 100%) inset;
-  }
-
-  .error-message {
-
-    color: hsl(0, 100%, 67%);
-    font-size: .65rem;
-    font-style: italic;
-    position: absolute;
-    bottom: -1.25rem;
-    left: 0;
-
-  }
-
-  .display-none {
-
-    display: none;
-
-  }
-
-  form > div:last-of-type {
-
-    display: flex;
-
-  }
-
-  form > div:last-of-type > div {
-
-    width: 100%;
+    justify-content: space-between;
 
   }
 
   form > div:last-of-type > div:last-of-type {
 
-    display: none;
-
-  }
-
-  form > div:last-of-type > div div {
-
-    width: 100%;
-    height: 50%;
-    border-bottom: 1px solid hsl(0, 0%, 86%);
+    display: block;
 
   }
 
   form button {
 
-    min-width: 96px;
-    min-height: 96px;
-    border-radius: 100%;
-    border-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(259, 100%, 65%);
-    cursor: pointer;
+    min-width: 80px;
+    min-height: 80px;
+
+  }
+}
+
+@media screen and (max-width: 558px) {
+
+  main {
+
+    border-radius: 15px 15px 100px 15px;
+    padding: 3.6rem 3.5rem;
 
   }
 
-  form button:disabled {
 
-    opacity: .5;
+  form input {
 
-  }
-
-  form button:disabled:hover {
-
-    background-color: hsl(259, 100%, 65%);
+    padding: .8rem;
+    max-width: 90px;
+    font-size: 1.25rem;
 
   }
 
-  form button:disabled:focus {
+  .error-message {
 
-    background-color: hsl(259, 100%, 65%);
-
-  }
-
-  form button:hover {
-
-    background-color: hsl(0, 0%, 8%);
+    font-size: .55rem;
 
   }
 
-  form button:focus {
+  form button {
 
-    outline: 1px solid black;
-    outline-offset: -1px;
-
-  }
-
-  form button img {
-
-    display: block;
-    width: 50%;
-    max-width: 100%;
-    margin: 25%;
-
-  }
-
-  main > div {
-
-    display: flex;
-    flex-direction: column;
+    min-width: 65px;
+    min-height: 65px;
 
   }
 
   main > div em {
 
-    font-weight: 800;
-    font-size: 6.5rem;
-    /*line-height: 7rem;*/
-    line-height: 1.075em;
+    font-size: 5rem;
+
+  }
+}
+
+@media screen and (max-width: 504px) {
+
+  main {
+
+    padding: 3.5rem 3.5rem;
 
   }
 
-  main > div span {
+  main > div em {
 
-    color: hsl(259, 100%, 65%);
-
-  }
-
-  @media screen and (max-width: 1200px) {
-    
-    :root {
-
-      font-size: 15px;
-
-    }
+    font-size: 4rem;
 
   }
 
-  @media screen and (max-width: 668px) {
+  form button {
 
-    main > div em {
-
-      font-size: 5.5rem;
-
-    }
+    min-width: 60px;
+    min-height: 60px;
 
   }
 
-  @media screen and (max-width: 640px) {
+}
 
-    :root {
+@media screen and (max-width: 454px) {
 
-      font-size: 14px;
-
-    }
-
-    .form-gap {
-
-      gap: 1rem;
-
-    }
-
-    .form-gap-error {
-
-      gap: 2rem;
-
-    }
-
-    form div:first-of-type {
-    
-      justify-content: space-between;
-
-    }
-
-    form > div:last-of-type > div:last-of-type {
-
-      display: block;
-
-    }
-
-    form button {
-
-      min-width: 80px;
-      min-height: 80px;
-
-    }
-  }
-
-  @media screen and (max-width: 558px) {
-
-    main {
-
-        border-radius: 15px 15px 100px 15px;
-        padding: 3.6rem 3.5rem;
-
-    }
-
-
-    form input {
-
-      padding: .8rem;
-      max-width: 90px;
-      font-size: 1.25rem;
-
-    }
-
-    .error-message {
-
-    font-size: .55rem;
-
-    }
-
-    form button {
-
-      min-width: 65px;
-      min-height: 65px;
-
-    }
-
-    main > div em {
-
-      font-size: 5rem;
-
-    }
-  } 
-
- @media screen and (max-width: 504px) {
-
-    main {
-
-      padding: 3.5rem 3.5rem;
-
-    }
-
-    main > div em {
-
-      font-size: 4rem;
-
-    }
-
-    form button {
-
-      min-width: 60px;
-      min-height: 60px;
-
-    }
-
-  }
-
-  @media screen and (max-width: 454px) {
-
-    .error-message {
+  .error-message {
 
     font-size: .5rem;
 
-    }
+  }
+
+}
+
+@media screen and (max-width: 447px) {
+
+
+  form div:first-of-type {
+
+    gap: 0;
 
   }
 
-  @media screen and (max-width: 447px) {
+}
 
+@media screen and (max-width: 424px) {
 
-    form div:first-of-type {
+  main > div em {
 
-      gap: 0;
-
-    }
-
-  }
-
-  @media screen and (max-width: 424px) {
-
-    main > div em {
-
-      font-size: 3.5rem;
-
-    }
+    font-size: 3.5rem;
 
   }
 
-  @media screen and (max-width: 410px) {
+}
+
+@media screen and (max-width: 410px) {
 
 
-    :root {
+  :root {
 
-      font-size: 13px;
-
-    }
-
-    main {
-
-      padding: 2.8rem 2rem;
-
-    }
+    font-size: 13px;
 
   }
 
-  @media screen and (max-width: 376px) {
+  main {
 
-    form input {
-
-      max-width: 75px;
-
-    }
-
-    form button {
-
-      min-width: 55px;
-      min-height: 55px;
-
-    }
+    padding: 2.8rem 2rem;
 
   }
 
-  @media screen and (max-width: 316px) {
+}
 
-    main {
+@media screen and (max-width: 376px) {
 
-      border-radius: 12px 12px 80px 12px;
+  form input {
 
-    }
+    max-width: 75px;
 
-    main > div em {
+  }
 
-      font-size: 3rem;
+  form button {
 
-    }
+    min-width: 55px;
+    min-height: 55px;
 
-    .error-message {
+  }
+
+}
+
+@media screen and (max-width: 316px) {
+
+  main {
+
+    border-radius: 12px 12px 80px 12px;
+
+  }
+
+  main > div em {
+
+    font-size: 3rem;
+
+  }
+
+  .error-message {
 
     font-size: .44rem;
 
-    }
-    
   }
 
-  @media screen and (max-width: 300px) {
-    
-    form label {
+}
 
-      font-size: .7rem;
+@media screen and (max-width: 300px) {
 
-    }
+  form label {
 
-    form input {
-
-      max-width: 60px;
-      padding: .7rem;
-      font-size: 1rem;
-      border-radius: 4px;
-
-    }
-
-    form button {
-
-      min-width: 45px;
-      min-height: 45px;
-
-    }
-
-    .error-message {
-
-      font-size: .4rem;
-
-    }
+    font-size: .7rem;
 
   }
 
-  @media screen and (max-width: 279px) {
+  form input {
 
-    main > div em {
-
-      font-size: 2.5rem;
-
-    }
-
-    .error-message {
-
-      font-size: .39rem;
-      bottom: -1rem;
-
-    }
-
-    .form-gap-error {
-
-      gap: 1.5rem;
-
-    }
+    max-width: 60px;
+    padding: .7rem;
+    font-size: 1rem;
+    border-radius: 4px;
 
   }
 
-  @media screen and (max-width: 250px) {
+  form button {
 
-    :root {
-
-      font-size: 12px;
-
-    }
-    
-    main {
-
-      padding: 2.8rem 1rem;
-      border-radius: 9px 9px 65px 9px;
-
-    }
+    min-width: 45px;
+    min-height: 45px;
 
   }
 
-  @media screen and (max-width: 220px) {
+  .error-message {
 
-    form input {
-      
-      max-width: 50px;
-      padding: .6rem;
-      
-    }
-    
-    form button {
+    font-size: .4rem;
 
-      min-width: 40px;
-      min-height: 40px;
+  }
 
-    }
+}
 
-    .error-message {
+@media screen and (max-width: 279px) {
+
+  main > div em {
+
+    font-size: 2.5rem;
+
+  }
+
+  .error-message {
+
+    font-size: .39rem;
+    bottom: -1rem;
+
+  }
+
+  .form-gap-error {
+
+    gap: 1.5rem;
+
+  }
+
+}
+
+@media screen and (max-width: 250px) {
+
+  :root {
+
+    font-size: 12px;
+
+  }
+
+  main {
+
+    padding: 2.8rem 1rem;
+    border-radius: 9px 9px 65px 9px;
+
+  }
+
+}
+
+@media screen and (max-width: 220px) {
+
+  form input {
+
+    max-width: 50px;
+    padding: .6rem;
+
+  }
+
+  form button {
+
+    min-width: 40px;
+    min-height: 40px;
+
+  }
+
+  .error-message {
 
     font-size: .36rem;
 
-    }
   }
+}
